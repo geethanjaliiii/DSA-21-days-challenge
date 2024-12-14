@@ -50,3 +50,4 @@ class LinkedList{
         this.head=newNode
      } 
 }
+

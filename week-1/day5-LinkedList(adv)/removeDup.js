@@ -19,7 +19,7 @@ class LinkedList{
         newNode.next=this.head
         this.head=newNode
      }
-     
+     //UNSORTED
     removeDuplicates(){
         if(!this.head){
             throw new Error('list is empty')
@@ -41,6 +41,26 @@ class LinkedList{
     
 
     } 
+
+    removeDupsInSorting(){
+        if(!this.head || !this.head.next){
+            console.log("list is empty of only head");
+            
+            return
+        }
+       
+        let current=this.head
+        
+        while(current && current.next){
+        if(current.data==current.next.data){
+            //till a different next is found ,current is not changed
+          current.next=current.next.next
+        }else{
+            current=current.next
+        }
+       
+        }
+    }
     display() {
         let current = this.head;
         let list = "";
