@@ -33,11 +33,11 @@ console.log(str.lastIndexOf('t'));//14
 console.log(str.startsWith('g'));//true
 console.log(str.startsWith('G'));//false
 
-console.log(str.substring(12));
+console.log('hoo',str.substring(12));
 console.log(str.slice(2,6));
 
 //conver to string
-console.log(String(undefined));
+console.log(String(undefined));//undefined
 let obj={name:"geetha"}
 //wrong
 console.log(String(obj));//[object Object]
@@ -48,7 +48,7 @@ console.log('A'==='a');
 //ascii==>65-95 A-Z
 //97-112=>a-z
 
-console.log(str.charCodeAt(0));
+console.log('charcode',str.charCodeAt(12));//ascii value
 console.log(String.fromCharCode(65));
 // 103
 // A
@@ -56,7 +56,7 @@ console.log(String.fromCharCode(65));
 let strr1='apple'
 let strr2='banana'
 console.log(strr1.localeCompare(strr2));//-1
-console.log(str.includes("geetha"));//true
+console.log('incl',str.includes("u"));//true
 
 function nonRepeatingChar(s) {
     let count={};
@@ -78,6 +78,7 @@ console.log(nonRepeatingChar('geeksforgeeks'));
 
 console.log(typeof('5'-'0'));//returns number
 
+console.log('5'*'1');
 
 
 
