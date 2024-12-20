@@ -1,6 +1,6 @@
 function getSecondLargest(arr) {
-    let largest=-1
-    let secondLargest=-1
+    let largest=-Infinity
+    let secondLargest=-Infinity
     for(let i=0;i<arr.length;i++){
         if(arr[i]>largest){
             secondLargest=largest;

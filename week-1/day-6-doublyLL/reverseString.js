@@ -17,3 +17,10 @@ var reverseString = function(s) {
     }
     helper(0,s.length-1)
     };
+    //
+    function reverseeString(s){
+        if(s==''){
+            return ''
+        }
+        return reverseeString(s.slice(1))+s[0]
+    }

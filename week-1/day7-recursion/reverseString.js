@@ -35,4 +35,11 @@ function reverseString2(s){
 }
 
 console.log(reverseString("hello"));
-console.log(reverseString2("hello"));
+console.log(reverseString2("hello"));//elloh==>llohe
+function reverseStringg(str){
+    if(str==''){
+        return ''
+    }
+    return reverseStringg(str.substring(1))+str[0]
+}
+console.log(reverseStringg("anju"));

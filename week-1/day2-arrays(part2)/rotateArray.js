@@ -25,7 +25,9 @@ console.log(rotateArr([1,2,3,4,5],2));
 
 const optimisedRotate=(arr,d)=>{
     let n=arr.length
-    
+    if(d>n){
+      d=d%n
+    }
   rotate(arr,0,d-1)
   rotate(arr,d,n-1)
   rotate(arr,0,n-1)
