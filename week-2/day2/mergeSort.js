@@ -6,18 +6,27 @@ function mergeSort(arr){
     let left=mergeSort(arr.slice(0,mid))
     let right=mergeSort(arr.slice(mid))
  
-    return merge(left,right)
+    return merge(left,right)//return to original aaray
 }
 function merge(left,right){
     let sortedArr=[]
-   while(left.length && right.length){
-    if(left[0]<right[0]){
-        sortedArr.push(left.shift()) 
+    let i=0;
+    let j=0
+   while(i<left.length && j<right.length){
+    if(left[i]<right[j]){
+        sortedArr.push(left[i++]) 
      }else{
-         sortedArr.push(right.shift())
+         sortedArr.push(right[j++])
      }
    }
-    return [...sortedArr,...left,...right]//also pushing already sorted left and right(remaining elements)
+   //also pushing already sorted left and right(remaining elements)
+   for(;i<left.length;i++){
+    sortedArr.push(left[i++])
+   }
+   for(;j<right.length;j++){
+    sortedArr.push(j++)
+   }
+    return sortedArr
 }
 console.log(mergeSort([38, 27, 43, 3, 9, 82, 10]));
 
