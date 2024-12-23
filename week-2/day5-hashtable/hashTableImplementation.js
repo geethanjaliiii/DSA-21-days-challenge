@@ -5,6 +5,7 @@ class HashTable{
     }
     hash(key){
         let hash=0
+        key=toString(key)
         for(let char of key){
             hash=(hash+char.charCodeAt(0)*23)%this.size
         }
@@ -57,22 +58,22 @@ class HashTable{
     display(){
       this.buckets.forEach((bucket,index)=>{
         if(bucket && bucket.length>0){
-          
             console.log(`${index}: ${JSON.stringify(bucket)}`);
         }
       })
     }
 }
-let hash=new HashTable(5)
-hash.set('name','anju')
-hash.set('age',22)
-hash.set('name','Hari')//updating
-hash.display()
-console.log('hii');
+module.exports=HashTable
+// let hash=new HashTable(5)
+// hash.set('name','anju')
+// hash.set('age',22)
+// hash.set('name','Hari')//updating
+// hash.display()
+// console.log('hii');
 
-hash.remove('name')
-hash.display()
-console.log(hash.get('age'));
+// hash.remove('name')
+// hash.display()
+// console.log(hash.get('age'));
 
 // Hash Table (Visualized as a Multidimensional Array):
 
