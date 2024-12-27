@@ -52,7 +52,9 @@ class BinaryTree{
     }
 }
 const tree=new BinaryTree()
+
 tree.insert(1)
 tree.insert(2)
 tree.insert(3)
 tree.inorder()
+module.exports=tree
