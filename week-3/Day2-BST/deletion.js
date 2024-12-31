@@ -55,7 +55,7 @@ class BinarySearchTree {
       //find inorder successor from right subtree(min value in right subtree of that node)
 
       node.val = this.inorderSuccessor(node.right); //replaced value
-      console.log('hi',node.val);
+      console.log('hi',node);
       
       //find the minElem in right subree and remove it
      node.right= this.deleteRecursively(node.right, node.val); //we cant simply delete as it might be connected to other subtrees
@@ -69,6 +69,8 @@ class BinarySearchTree {
     return node.val;
   }
   inorder(node = this.root) {
+    console.log(node);
+    
     if (node) {
       if (node.left) this.inorder(node.left);
       console.log(node.val);
