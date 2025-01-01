@@ -1,0 +1,35 @@
+Graphs cane be represented in 3 ways
+1.Adjacecncy metrix (little hard but efficient)
+2.adjancency list (simple)
+3.edge list (less effienect)
+
+1.*****************Adjacency list*************
+consider directed graph
+A → B → C
+↓     ↘
+D       D
+
+visual representation of matrix
+    A  B  C  D
+A [ 0  1  0  1 ]
+B [ 0  0  1  1 ]
+C [ 0  0  0  0 ]
+D [ 0  0  0  0 ]
+
+2.adjacency listConsider this directed graph:
+
+mathematica
+
+    A → B
+    ↓   ↘
+    C     D
+    ↑   ↙
+    E
+    
+The adjacency list for this graph:
+
+A → [ B, C ]
+B → [ D ]
+C → [ E ]
+D → [ C ]
+E → []

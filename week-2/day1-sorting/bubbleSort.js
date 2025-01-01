@@ -10,7 +10,7 @@
 function bubbleSort(arr){
     let n=arr.length;
     let swapped ;// to break early if no swapping occurs 
-    for(let i=0;i<n-1;i++){
+    for(let i=0;i<n-1;i++){//by the time u reach n-1 the array is already sorted
        swapped=false;//currently no swapping occured
         for(let j=0;j<n-i-1;j++){
             if(arr[j]>arr[j+1]){

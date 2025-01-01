@@ -33,12 +33,13 @@ peek(){
     
   }
 }
-const stack =new Stack()
-stack.push(20)
-stack.push(28)
-stack.push(30)
-stack.display()
-console.log(stack.peek());
-stack.pop()
-console.log(stack.peek());
+module.exports=Stack
+// const stack =new Stack()
+// stack.push(20)
+// stack.push(28)
+// stack.push(30)
+// stack.display()
+// console.log(stack.peek());
+// stack.pop()
+// console.log(stack.peek());
 
