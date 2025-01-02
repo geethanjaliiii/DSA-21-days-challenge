@@ -45,8 +45,16 @@ class BinaryTree{
         console.log(node.val);
         this.inorder(node.right)
     }
-    search(){
-        
+    search(node,value){
+       if(!node){
+        return false
+       }
+       if(node.val==value){
+        return true
+       }
+        let leftSearch=this.search(node.left,value)
+        let rightSearch=this.search(node.right,value)
+        return leftSearch ||rightSearch
     }
 }
 const binaryTree =new BinaryTree()
@@ -56,3 +64,4 @@ binaryTree.insert(3)
 binaryTree.insert(4)
 
 binaryTree.inorder()
+console.log(binaryTree.search(binaryTree.root,5));

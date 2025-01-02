@@ -33,7 +33,7 @@ class TreeNode {
         while(true){
             if(value<current.val){
                 if(current.left==null){
-                    current.next=new TreeNode(value);
+                    current.left=new TreeNode(value);
                     break;
                 }else{
                   current=current.left

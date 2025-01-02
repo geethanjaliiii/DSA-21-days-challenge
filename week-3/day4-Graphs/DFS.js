@@ -35,6 +35,7 @@ class Graph {
 
       const neighbours = this.adjacencyList[current];
       for (let i = neighbours.length - 1; i >= 0; i--) {
+        //last added elements will be processed first
         if (!visited.has(neighbours[i])) {
           stack.push(neighbours[i]);
         }

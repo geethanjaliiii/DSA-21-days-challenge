@@ -11,25 +11,7 @@ class Graph{
     constructor(){
       this.adjacencyList={} //like key value pairs
     }
-    addVertex(vertex){
-        if(!this.adjacencyList[vertex]){
-            this.adjacencyList[vertex]=[]
-        }
-    }
-    addEdge(vertex1,vertex2,isUndirected=false){
-        //assuming its directed
-        if(!this.adjacencyList[vertex1]){
-            this.addVertex(vertex1)
-        }
-        if(!this.adjacencyList[vertex2]){
-            this.addVertex(vertex2)
-        }
-        this.adjacencyList[vertex1].push(vertex2)
-        //if graph is undirected
-        if(isUndirected){
-            this.adjacencyList[vertex2].push(vertex1)
-        }
-    }
+   
     removeVertex(vertex){
         if(!this.adjacencyList[vertex]){
             throw new Error("invalid vertex")
