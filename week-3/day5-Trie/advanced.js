@@ -35,15 +35,17 @@ class Trie{
         }
 
         //recursive
-        for(let char in node.children){
+        for(let char in node.children){//
             getWords(node.children[char],word+char)
+        
         }
       }
+      //helper function to get words
       getWords(node)
       return result
     }
 
-   //count words with prefix
+  
 }
 const trie =new Trie()
 trie.insert('ball')

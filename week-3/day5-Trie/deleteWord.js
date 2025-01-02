@@ -27,6 +27,19 @@ class Trie {
     //after the loop ends we mark the last element with end of word
     node.isEndOfWord = true;
   }
+  search(word){
+    let node =this.root;
+    for(let char of word){
+        if(!node.children[char]){
+            //if that char is not present return
+            return false
+        }
+        //if found move forward
+        node=node.children[char]
+    }
+    //after completing loop we need to check if the last char we found is endof word
+    return node.isEndOfWord
+}
   //if we are iterating we first delete the last element then check subsequent elements
   delete(word) {
     function deleteHelper(node, word, depth) {
@@ -47,16 +60,23 @@ class Trie {
         delete node.children[char]; //delete it
       }
 
-      //forv backtracking :condition to check eligibilty for delting
+      //for backtracking :condition to check eligibilty for deleting
 
       //1.no childrens
       //2..that node shouldnot be end of another word
-      return Object.keys(node.children[char]).length === 0 && !node.isEndOfWord;
+      return Object.keys(node.children).length === 0 && !node.isEndOfWord;
 
-      //if they still have children node cant be deleted no point in continuing the process
-      return false;
+   
     }
 
     deleteHelper(this.root, word, 0);
   }
+ 
 }
+
+const trie=new Trie()
+trie.insert("cat")
+trie.insert("cattle")
+trie.insert("car")
+trie.delete('cat')
+console.log(trie.search('cat'));
