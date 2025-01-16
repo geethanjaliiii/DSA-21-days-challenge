@@ -16,10 +16,10 @@ class MaxHeap{
         let left=2*index+1
         let right=2*index+2
 
-        if(index<length && this.heap[left]>this.heap[largest]){
+        if(left<length && this.heap[left]>this.heap[largest]){
             largest=left
         }
-        if(index<length && this.heap[right]>this.heap[largest]){
+        if(right<length && this.heap[right]>this.heap[largest]){
             largest=right
         }
         //we are continue recursion only if indexs mismatch

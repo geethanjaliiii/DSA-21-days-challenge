@@ -1,6 +1,6 @@
 //in this qn ,BEfore deleting, we need to ensure that the node has no children left and the node is not end of another word
 
-//step 1. we have a helper function ,we need to check the bease case (we have reached full depth)
+//step 1. we have a helper function ,we need to check the bese case (we have reached full depth)
 
 //when we reach the last word ,we should unmark it as isendofword, then if its valid for deleting return true
 

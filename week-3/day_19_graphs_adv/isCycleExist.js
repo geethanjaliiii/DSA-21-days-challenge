@@ -43,7 +43,8 @@ class Graph {
         return true
       }
     }
-    //after traversing all vertex
+    //after traversing all  vertex
+
     return false
   }
   dfsCheck(vertex,visited,pathVisited){
@@ -61,6 +62,9 @@ class Graph {
         
       }
     }
+    //after traversing all adjacent vertices
+  pathVisited.delete(vertex)
+  return false
   }
   addVertex(vertex) {
     if (!this.adjacencyList[vertex]) {

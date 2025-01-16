@@ -10,9 +10,10 @@ function heapSort(arr){
         heapify(arr,i,n)
     }
     //now we got heap
-    for(let i=n-i;i>0;i--){
-        
+    for(let i=n-1;i>0;i--){
+        //move root to end
         [arr[0],arr[i]]=[arr[i],arr[0]]
+        //reduce heap size
         heapify(arr,0,i)
     }
     return arr
@@ -29,6 +30,6 @@ function heapify(arr,i,n){
     }
     if(largest!=index){
         [arr[i],arr[largest]]=[arr[largest],arr[i]]
-        heapify(arr,largest)
+        heapify(arr,largest,n)
     }
 }

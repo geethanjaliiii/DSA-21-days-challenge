@@ -3,6 +3,7 @@ class MaxHeap {
     this.heap = [];
   }
 
+  //use heapify instead
   insert(value) {
     this.heap.push(value);
     let index = this.heap.length - 1;
